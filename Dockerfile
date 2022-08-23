@@ -35,6 +35,10 @@ RUN [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 RUN chmod +x $NVM_DIR/nvm.sh
 RUN $NVM_DIR/nvm.sh install -s 14.19.0
 
+# Composer configurations
+RUN composer config --global github-protocols https
+RUN composer config --global gitlab-protocol https
+
 WORKDIR /var/www/html/
 
 COPY . .
