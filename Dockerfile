@@ -3,7 +3,7 @@ FROM alpine:latest
 RUN apk update && apk upgrade
 
 # Install packages
-RUN apk add --no-cache bash git libwebp libzip libpng wget curl nginx
+RUN apk add --no-cache bash git libwebp libzip libpng wget curl nginx patch
 
 # Install php8.1
 RUN apk --no-cache add php81 php81-cli php81-fpm php81-opcache php81-pecl-apcu php81-mysqli \
